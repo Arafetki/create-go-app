@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"time"
 
 	"github.com/arafetki/create-go-app/internal/licence"
 	"github.com/spf13/cobra"
@@ -14,14 +15,18 @@ var initCmd = &cobra.Command{
 	Short: "Initialize a new Go project",
 	Run: func(cmd *cobra.Command, args []string) {
 
-		var projectName string
+		var (
+			projectName  string
+			userFullName string
+		)
 
 		if len(args) == 0 {
-			projectName = StringPrompt("Enter Project name")
+			projectName = StringPrompt("Enter Project Name")
 
 		} else {
 			projectName = args[0]
 		}
+		userFullName = StringPrompt("Enter Your FullName")
 
 		currentDir, err := os.Getwd()
 		if err != nil {
@@ -47,7 +52,7 @@ var initCmd = &cobra.Command{
 			}
 		}
 
-		err = licence.GenerateMIT(filepath.Join(currentDir, projectName), "Arafet BenKilani", 2024)
+		err = licence.GenerateMIT(projectPath, userFullName, time.Now().Year())
 		if err != nil {
 			fmt.Println("Error generating LICENSE file:", err.Error())
 			return
