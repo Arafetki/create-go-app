@@ -1,6 +1,11 @@
 package licence
 
-type LicenseData struct {
+type Copyright struct {
 	Year   int
-	Author string
+	Holder string
+}
+
+type Licence struct {
+	Type string
+	Copyright
 }

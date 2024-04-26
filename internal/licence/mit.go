@@ -8,7 +8,7 @@ import (
 	"github.com/arafetki/create-go-app/assets"
 )
 
-func GenerateMIT(path string, author string, year int) error {
+func GenerateMIT(path string, copyright Copyright) error {
 
 	licenceTemplate, err := assets.EmbeddedFiles.ReadFile("templates/mit.go.tmpl")
 	if err != nil {
@@ -26,12 +26,7 @@ func GenerateMIT(path string, author string, year int) error {
 	}
 	defer file.Close()
 
-	data := LicenseData{
-		Author: author,
-		Year:   year,
-	}
-
-	err = tmpl.Execute(file, data)
+	err = tmpl.Execute(file, copyright)
 
 	return err
 }
