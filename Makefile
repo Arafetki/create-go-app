@@ -52,4 +52,4 @@ build:
 .PHONY: run
 ## run the application
 run: build
-	./bin/cli
+	./bin/cli ${cmd}
