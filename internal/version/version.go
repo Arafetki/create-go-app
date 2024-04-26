@@ -5,7 +5,13 @@ import (
 	"runtime/debug"
 )
 
+var version = "0.1.0"
+
 func Get() string {
+	return version
+}
+
+func GetCommit() string {
 	var revision string
 	var modified bool
 

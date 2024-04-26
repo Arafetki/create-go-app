@@ -19,5 +19,4 @@ func Execute() error {
 
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&verbose, "verbose", "v", false, "Display more verbose output in console output. (default: false)")
-	rootCmd.AddCommand(versionCmd)
 }
