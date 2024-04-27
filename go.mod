@@ -1,4 +1,4 @@
-module github.com/arafetki/create-go-app
+module github.com/abenk-oss/scaffold-go-app
 
 go 1.22.2
 

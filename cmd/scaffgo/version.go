@@ -3,7 +3,7 @@ package scaffgo
 import (
 	"fmt"
 
-	"github.com/arafetki/create-go-app/internal/version"
+	"github.com/abenk-oss/scaffold-go-app/internal/version"
 	"github.com/spf13/cobra"
 )
 

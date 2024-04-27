@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/arafetki/create-go-app/cmd/scaffgo"
+	"github.com/abenk-oss/scaffold-go-app/cmd/scaffgo"
 )
 
 func main() {

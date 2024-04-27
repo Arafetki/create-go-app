@@ -3,7 +3,7 @@ package version
 import (
 	"runtime"
 
-	"github.com/arafetki/create-go-app/internal/git"
+	"github.com/abenk-oss/scaffold-go-app/internal/git"
 )
 
 type Info struct {
