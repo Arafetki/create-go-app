@@ -47,9 +47,5 @@ audit:
 .PHONY: build
 ## build the application
 build:
-	go build -ldflags='-s -w' -o=./bin/cli ./cmd/cli
+	go build -ldflags='-s -w' -o=./bin/scaffgo ./cmd/
 
-.PHONY: run
-## run the application
-run: build
-	./bin/cli ${cmd}
